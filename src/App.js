@@ -3,22 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const todos = ["Go to market", "Buy food", "Make dinner"];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul className="App-Todos">
+        {todos.map((e) => <li className="App-Todos-Item">{e}</li>)}
+      </ul>
     </div>
   );
 }
